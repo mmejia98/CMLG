@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+# Importaremos la libreria OS para obtener la direccion
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,13 +58,13 @@ ROOT_URLCONF = 'APP.urls'
 
 # En DIR hemos agregado el directorio que contendra las paginas 
 # Este es templates
-
+# Usaremos el metodo getcwd para obtener la URL del proyecto y facilitar el uso
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Agrega aqui la direccion de los templates. Usa el explorador de archivos y copia la direccion
-        'DIRS': ['C:/REPOSITORIO/CMLG/APP/templates'],
+        'DIRS': [os.getcwd().replace('\\','/') + '/APP/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Turismo',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': '00Alessandrohouse',
         'HOST': '127.0.0.1',
         'DATABASE_POST': '5432',
     }
