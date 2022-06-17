@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %} {%endblock%}</title>
+    <style>
+        #bienvenida{
+            background-color: rgb(58, 190, 179);
+            text-align: center;
+        }
+
+        #pie_pagina{
+            text-align: right;
+        }
+    </style>
+</head>
+<body bgcolor="#D7E8E8">
+    <!--Encabezado-->
+    <h1 id="bienvenida">¡CMLG te da la bienvenida!</h1>
+    
+    <!--Barra de navegacion-->
+    {%include "barra_navegacion.html"%}
+
+    <!--contenido-->
+    {%block content%} {%endblock%}
+
+    <!--Pie de pagina-->
+    <h6 id="pie_pagina">TODOS LOS DERECHOS RESERVADOS</h6>
+</body>
+</html>

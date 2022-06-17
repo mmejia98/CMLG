@@ -16,13 +16,14 @@ Including another URLconf
 from ast import Import
 from django.contrib import admin
 from django.urls import path
-from APP.views import inicio, index
+from APP.views import inicio
 
-#Agregar las 
+# Ahora haremos que el usuario pueda acceder por medio del URL
+# Para lograrlo agregar un path con los argumentos requeridos
+# Path('tu_pagina/', tu_metodo_en_view.py)
+# La URL sera la siguiente: http://127.0.0.1:8000/tu_pagina
 
 urlpatterns = [
-    path('inicio/', inicio),
     path('admin/', admin.site.urls),
-    path('', index, name='index')
-    
+    path('', inicio),
 ]
