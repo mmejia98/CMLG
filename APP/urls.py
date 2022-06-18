@@ -31,4 +31,5 @@ urlpatterns = [
     path('reserva/',include('reserva.urls')),
     path('', inicio, name='inicio'),
     path('accounts/', include("django.contrib.auth.urls")),
+    path('usuario/',include('usuario.urls')),
 ]
