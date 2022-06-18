@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'paquete',
+    'reporte',
+    'reserva',
 ]
 
 MIDDLEWARE = [
@@ -51,10 +54,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'APP.urls'
 
+# En DIR hemos agregado el directorio que contendra las paginas
+# Este es templates
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        # Agrega aqui la direccion de los templates. Usa el explorador de archivos y copia la direccion
+        'DIRS': ['C:/Proyecto/CMLG/APP/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
