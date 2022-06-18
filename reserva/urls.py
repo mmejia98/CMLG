@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path
 from APP.views import inicio
 from paquete.views import paquete1
-from django.urls import include
 
 # Ahora haremos que el usuario pueda acceder por medio del URL
 # Para lograrlo agregar un path con los argumentos requeridos
@@ -26,9 +25,5 @@ from django.urls import include
 # La URL sera la siguiente: http://127.0.0.1:8000/tu_pagina
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', inicio),
-    path('paquete/',include('paquete.urls')),
-    path('reporte/',include('reporte.urls')),
-    path('reserva/',include('reserva.urls')),
+    #path('', ),
 ]

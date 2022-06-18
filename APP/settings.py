@@ -64,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Agrega aqui la direccion de los templates. Usa el explorador de archivos y copia la direccion
-        'DIRS': [os.getcwd().replace('\\','/') + '/APP/templates'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Turismo',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': '00Alessandrohouse',
         'HOST': '127.0.0.1',
         'DATABASE_POST': '5432',
     }
@@ -132,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
