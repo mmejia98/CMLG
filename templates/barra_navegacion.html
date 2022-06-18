@@ -22,6 +22,13 @@
             <li>CREAR RESERVA</li>
             <li>CONSULTA TU RESERVA</li>
             <li>RECOMENDACIONES</li>
+            {% if user.is_authenticated %}
+            <li>{{ user.username }}</li>
+            <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+            {% else  %}
+            <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+            <li>Registrarse</li>
+            {% endif %}
         </ul>
     </body>
 </html>
