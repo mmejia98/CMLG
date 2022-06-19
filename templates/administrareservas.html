@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/administrareserva.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrar Reservas</title>
+</head>
+<body>
+    <h1>Administracion de Reservas</h1>
+   
+<div id="info">
+    <div id="columna1">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha"><br><br>
+
+        <label for="ticket">Ticket:</label>
+        <input type="text" class="user-info" id="ticket" name="ticket" value=""><br>
+
+        <button type="submit">Buscar</button>
+
+    </div>
+
+    <div id="columna2">
+            <div class="group">
+                <div class="radiobuttons">
+                <label for="estado">Estado:</label>
+                <label><input name="user" value="Activa" type="radio" class="radio" />Activa</label>
+                <label><input name="user" value="Cancelada" type="radio" class="radio"/>Cancelada</label>
+                </div>
+            </div>
+
+            <label for="nombre">Nombre del cliente:</label>  
+            <input type="text" class="user-info" id="nombre" name="nombre" value="">
+            <button type="reset">Limpiar</button>
+    </div>
+</div><br>
+
+Lista de reservas<br>
+
+<table id="campos">
+    <tr>
+      <th>N° de ticket</th>
+      <th>Cliente</th>
+      <th>Descripcion</th>
+      <th>Estado</th>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+  
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+  
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+  </table>
+
+  <button type="submit">Crear Reporte</button>
+</body>
+</html>
