@@ -1,0 +1,12 @@
+#barra_navegacion{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#barra_navegacion li{
+    display: inline;
+    margin: 0 20px;
+}
