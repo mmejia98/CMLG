@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from APP.views import inicio
 from paquete.views import paquete1
-from django.urls import include, index, prueba
+from django.urls import include
+
 
 # Ahora haremos que el usuario pueda acceder por medio del URL
 # Para lograrlo agregar un path con los argumentos requeridos
@@ -26,8 +27,6 @@ from django.urls import include, index, prueba
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('prueba/', prueba)
     path('paquete/',include('paquete.urls')),
     path('reporte/',include('reporte.urls')),
     path('reserva/',include('reserva.urls')),
