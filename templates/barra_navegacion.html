@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="stylesheet" href="../static/barra_navegacion.css">
+    <style>
+        #barra_navegacion{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        #barra_navegacion li{
+            display: inline;
+            margin: 0 20px;
+        }
+
+    </style>
+</head>
+    <body>
+        <ul id="barra_navegacion">
+            <li >INICIO</li>
+            <li>CREAR RESERVA</li>
+            <li>CONSULTA TU RESERVA</li>
+            <li>RECOMENDACIONES</li>
+            {% if user.is_authenticated %}
+            <li>{{ user.username }}</li>
+            <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+            {% else  %}
+            <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+            <li><a href="{% url 'registrarse' %}">Registrarse</a></li>
+            {% endif %}
+        </ul>
+    </body>
+</html>

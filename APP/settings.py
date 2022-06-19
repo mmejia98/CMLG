@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+# Importaremos la libreria OS para obtener la direccion
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,9 +56,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'APP.urls'
 
+# En DIR hemos agregado el directorio que contendra las paginas 
+# Este es templates
+# Usaremos el metodo getcwd para obtener la URL del proyecto y facilitar el uso
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # Agrega aqui la direccion de los templates. Usa el explorador de archivos y copia la direccion
         'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -87,7 +94,8 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'DATABASE_POST': '5432',
     }
-}
+    }
+
 
 
 # Password validation
@@ -125,8 +133,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
