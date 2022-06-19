@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+# Importaremos la libreria OS para obtener la direccion
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'APP.urls'
 
 # En DIR hemos agregado el directorio que contendra las paginas
 # Este es templates
-
+# Usaremos el metodo getcwd para obtener la URL del proyecto y facilitar el uso
 
 TEMPLATES = [
     {
