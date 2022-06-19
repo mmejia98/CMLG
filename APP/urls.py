@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from APP.views import inicio
 from paquete.views import paquete1
-from django.urls import include
+from django.urls import include, registrase
 
 
 # Ahora haremos que el usuario pueda acceder por medio del URL
@@ -33,4 +33,5 @@ urlpatterns = [
     path('', inicio, name='inicio'),
     path('accounts/', include("django.contrib.auth.urls")),
     path('usuario/',include('usuario.urls')),
+    path('registro',registrase)
 ]
