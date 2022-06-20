@@ -1,57 +1,59 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/catalogo.css">
-    <title>CATALOGO</title>
-</head>
-<body bgcolor="#D7E8E8">  
-    <div id="buscar">
-        <h1>¿Buscando un viaje?</h1>
+{%extends "base.html" %}
 
-        <form action="", method="get">
-            
-            <select name="paquete" id="paquete">
-                <option value="001">San Salvador</option>
-                <option value="002">La Libertad</option>
-                <option value="003">La Paz</option>
-            </select>
-            <input type="submit", value="Seleccionar departamento..">
-        </form>
+{% block title %} Catalogo {%endblock%}
+
+{%block content%} 
+
+<br>
+<br>
+
+<h1>Selecciona el departamento que gustes visitar!</h1>
+
+<div id="buscar">
+    <form action="", method="get">
+        
+        <select name="paquete" id="paquete">
+            <option selected value="001">San Salvador</option>
+            <option value="002">La Libertad</option>
+            <option value="003">La Paz</option>
+        </select>
+        <input type="submit", value="Seleccionar departamento..">
+    </form>
+</div>
+
+<div id="lista">
+
+    <div id="elemento">
+        <p id="p_elemento">NOMBRE DEL PAQUETE</p>
+        <p id="p_contenido">Este es el nombre del paquete</p>
     </div>
 
-    <div id="lista">
-
-        <div id="elemento">
-            <p id="p_elemento">NOMBRE DEL PAQUETE</p>
-            <p id="p_contenido">Este es el nombre del paquete</p>
-        </div>
-    
-        <div id="elemento">
-            <p id="p_elemento">DESCRIPCION</p>
-            <p id="p_contenido">Esta es la descripcion</p>
-        </div>
-    
-        <div id="elemento">
-            <p id="p_elemento">FECHA DE INICIO Y FIN</p>
-            <p id="p_contenido">Esta es la fecha</p>
-        </div>
-    
-        <div id="elemento">
-            <p id="p_elemento">NÚMERO TOTAL DE DÍAS</p>
-            <p id="p_contenido">Este es el número total de días</p>
-        </div>
-    
-        <div id="elemento">
-            <p id="p_elemento">NÚMERO DE PERSONAS</p>
-            <p id="p_contenido">Este es el número de personas</p>
-        </div>
-    
-        <div id="elemento">
-            <p id="p_elemento">PRECIO</p>
-            <p id="p_contenido">Este es el precio</p>
-        </div>
-
+    <div id="elemento">
+        <p id="p_elemento">DESCRIPCION</p>
+        <p id="p_contenido">Esta es la descripcion</p>
     </div>
-</body>
-</html>
+
+    <div id="elemento">
+        <p id="p_elemento">FECHA DE INICIO Y FIN</p>
+        <p id="p_contenido">Esta es la fecha</p>
+    </div>
+
+    <div id="elemento">
+        <p id="p_elemento">NÚMERO TOTAL DE DÍAS</p>
+        <p id="p_contenido">Este es el número total de días</p>
+    </div>
+
+    <div id="elemento">
+        <p id="p_elemento">NÚMERO DE PERSONAS</p>
+        <p id="p_contenido">Este es el número de personas</p>
+    </div>
+
+    <div id="elemento">
+        <p id="p_elemento">PRECIO</p>
+        <p id="p_contenido">Este es el precio</p>
+    </div>
+
+</div>
+
+
+{%endblock%}

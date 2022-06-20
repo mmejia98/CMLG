@@ -1,3 +1,4 @@
+import re
 from django.http import HttpResponse
 from django.template import *
 from django.shortcuts import *
@@ -6,8 +7,9 @@ from .models import Paquete, EspecificacionPaquete
 # Agrega aqui tu pagina declarando un metodo
 
 def verPaquetes(request):
-    paquetes = Paquete.objects.all()
-    return HttpResponse(paquetes)
+    #paquetes = Paquete.objects.all()
+    #return HttpResponse(paquetes)
+    return render(request, "catalogo.html",None)
 
 def paquete1(request):
     return 0
