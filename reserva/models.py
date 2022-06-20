@@ -4,6 +4,7 @@ from tkinter import CASCADE
 from django.db import models
 from paquete.models import *
 from reporte.models import *
+from usuario.models import *
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -17,6 +18,7 @@ class Pago(models.Model):
 class Reserva(models.Model):
     pago = models.OneToOneField(Pago, on_delete=models.CASCADE)
     catalogo = models.ForeignKey(Catalogo, on_delete=models.CASCADE)
+    persona = models.OneToOneField(Persona, on_delete=models.CASCADE, null=True, blank=True)
     reporte = models.ForeignKey(Reporte, null=True, blank=True, on_delete=models.SET_NULL)
     ticket = models.CharField(max_length=8, unique=True)
     pagado = models.BooleanField()
