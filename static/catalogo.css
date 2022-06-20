@@ -1,0 +1,24 @@
+#buscar{
+    text-align: center;
+}
+
+
+#lista{
+    justify-content: center;
+    display: flex;
+}
+
+#elemento{
+margin: 35px;
+height: 150px;
+width: 500px;
+}
+
+#p_elemento{
+    text-align: center;
+}
+
+#p_contenido{
+    text-align: center;
+
+}

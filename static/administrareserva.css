@@ -1,0 +1,100 @@
+h1 {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 1rem;
+    color: rgb(0, 0, 0);
+  }
+
+  body{
+    background: rgb(58, 190, 179);
+  }
+
+#columna1 {
+    padding-left: 20%;
+    position:absolute;
+}
+
+#columna2 {
+    padding-left: 50%;
+}
+
+label,
+p {
+  display: block;
+  width: 92%;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.user-info,
+select,
+#textarea {
+  width: 15%;
+  margin-left:5px;
+  margin-right: auto;
+  display: block;
+  padding: 5px 200px;
+  border-radius: 5px;
+  border-style: none;
+  padding-left: 10px;
+  font-size: 16px;
+  color: rgb(8, 8, 8);
+}
+
+.radio,
+.checkbox {
+  display: inline-block;
+  margin-right: 15px;
+  transform: scale(1.5);
+}
+.group,
+.check {
+  padding-bottom: 2px;
+}
+button {
+  display: block;
+  width: 30%;
+  margin-top: 35px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgb(62, 212, 82);
+  color:rgb(2, 48, 71);
+  border-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Tahoma;
+}
+.radiobuttons, .checklist{
+  width: 95%;
+}
+
+
+#campos {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    padding-top: 3rem;
+  }
+  
+  #campos td, #campos th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 50px;
+  }
+  
+  #campos tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #campos tr:hover {background-color: #ddd;}
+  
+  #campos th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: rgb(5, 5, 5);
+  }
