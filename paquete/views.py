@@ -23,9 +23,12 @@ def verEspecificacionPaquete(request, id):
     especificacionPaquete = EspecificacionPaquete.objects.get(id__exact=paquete.especificacionpaquete_id)
     return HttpResponse(especificacionPaquete)
 
-def verCatalogo(request, id):
-    paquetes = Paquete.objects.filter(catalogo_id=id).select_related('especificacionpaquete')
-    catalogos = Catalogo.all()
+def verCatalogo(request):
+    if(request.GET.get('catalogo') == '0' or request.GET.get('catalogo') == ''):
+        return redirect('paquetes')
+    else:
+        paquetes = Paquete.objects.filter(catalogo_id=request.GET.get('catalogo')).select_related('especificacionpaquete')
+    catalogos = Catalogo.objects.all()
     return render(request, "catalogo.html",{
         'paquetes' : paquetes,
         'catalogos' : catalogos,

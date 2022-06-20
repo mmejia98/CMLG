@@ -11,7 +11,7 @@
 <div id="buscar">
     <form action="{% url 'catalogo' %}", method="get">    
         <select name="catalogo" id="catalogo">
-            <option value="" selected>--Seleccione--</option>
+            <option value="0" selected>--Seleccione--</option>
             {% for catalogo in catalogos %}
             <option value="{{catalogo.id}}">{{catalogo.departamento}}</option>
             {% endfor %}
