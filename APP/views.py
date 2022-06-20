@@ -255,7 +255,7 @@ def Crear(request):
 
                   <br></br>
                   
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  <pr><div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="button" class="btn btn-primary btn-lg">Cancelar</button>
                   </div> ''')
 
