@@ -26,5 +26,5 @@ from . import views
 urlpatterns = [
     path('verPaquetes/', views.verPaquetes, name='catalogo'),
     path('verPaquetes/<int:id>/', views.verEspecificacionPaquete, name='verEspecificacionPaquete'),
-    path('verPaquetes/catalogo/<int:id>/', views.verCatalogo, name='catalogo'),
+    path('verPaquetes/?catalogo=<int:id>', views.verCatalogo, name='catalogo'),
 ]

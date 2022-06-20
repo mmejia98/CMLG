@@ -4,19 +4,17 @@
 
 {%block content%} 
 
-
-
 <br>
 
 <h2 id="h1_catalogo">Selecciona el departamento que gustes visitar!</h2>
 
 <div id="buscar">
-    <form action="", method="get">
-        
-        <select name="paquete" id="paquete">
-            <option selected value="001">San Salvador</option>
-            <option value="002">La Libertad</option>
-            <option value="003">La Paz</option>
+    <form action="{% url 'catalogo' %}", method="get">    
+        <select name="catalogo" id="catalogo">
+            <option value="" selected>--Seleccione--</option>
+            {% for catalogo in catalogos %}
+            <option value="{{catalogo.id}}">{{catalogo.departamento}}</option>
+            {% endfor %}
         </select>
         <input type="submit", value="Seleccionar departamento..">
     </form>
@@ -31,13 +29,15 @@
             <th>NÚMERO DE PERSONAS</th>
             <th>PRECIO</th>
         </tr>
+        {% for paquete in paquetes %}
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{paquete.especificacionpaquete.descripcion}}</td>
+            <td>{{paquete.especificacionpaquete.fechaInicio}}</td>
+            <td>{{paquete.especificacionpaquete.numeroDias}}</td>
+            <td>{{paquete.especificacionpaquete.numeroPersonas}}</td>
+            <td>{{paquete.especificacionpaquete.precio}}</td>
         </tr>
+        {% endfor %}
 </table>
 
 

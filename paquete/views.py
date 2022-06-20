@@ -30,6 +30,3 @@ def verCatalogo(request, id):
         'paquetes' : paquetes,
         'catalogos' : catalogos,
         })
-
-
-
