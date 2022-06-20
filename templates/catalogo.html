@@ -20,6 +20,8 @@
     </form>
 </div>
 
+<p id="p_instruccion">Para seleccionar su paquete solo coloque el cursor sobre el paquete y haga click sobre el</p>
+
 <table>
     <caption style="text-align: center;"></caption>
         <tr>
@@ -31,7 +33,7 @@
         </tr>
         {% for paquete in paquetes %}
         <tr>
-            <td>{{paquete.especificacionpaquete.descripcion}}</td>
+            <td> <a href="">{{paquete.especificacionpaquete.descripcion}}</a></td>
             <td>{{paquete.especificacionpaquete.fechaInicio}}</td>
             <td>{{paquete.especificacionpaquete.numeroDias}}</td>
             <td>{{paquete.especificacionpaquete.numeroPersonas}}</td>

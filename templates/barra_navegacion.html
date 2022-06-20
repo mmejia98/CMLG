@@ -21,10 +21,10 @@
 </head>
     <body>
         <ul id="barra_navegacion">
-            <li >INICIO</li>
-            <li>CREAR RESERVA</li>
-            <li>CONSULTA TU RESERVA</li>
-            <li>RECOMENDACIONES</li>
+            <li ><a href="{% url 'inicio' %}">INICIO</a></li>
+            <li> <a href="{% url 'paquetes' %}">VER CATALOGO</a></li>
+            <li> <a href="">CONSULTA TU RESERVA</a></li>
+            <li> <a href="">RECOMENDACIONES</a></li>
             {% if user.is_authenticated %}
             <li>{{ user.username }}</li>
             <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
