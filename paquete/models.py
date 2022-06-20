@@ -5,6 +5,9 @@ from django.db import models
 class EspecificacionPaquete(models.Model):
     precio = models.FloatField()
     descripcion = models.TextField()
+    fechaInicio = models.DateField(null=True, blank=True)
+    numeroPersonas = models.IntegerField(null=True, blank=True)
+    numeroDias = models.IntegerField(null=True, blank=True)
     tipo = models.CharField(max_length=20)
     def __str__(self):
         return self.descripcion

@@ -64,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Agrega aqui la direccion de los templates. Usa el explorador de archivos y copia la direccion
-        'DIRS': ['C:/Proyecto/CMLG/templates'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Turismo',
         'USER': 'postgres',
-        'PASSWORD': '4362',
+        'PASSWORD': 'mariojose1998',
         'HOST': '127.0.0.1',
         'DATABASE_POST': '5432',
     }
