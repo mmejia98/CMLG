@@ -4,10 +4,11 @@
 
 {%block content%} 
 
-<br>
+
+
 <br>
 
-<h1>Selecciona el departamento que gustes visitar!</h1>
+<h2 id="h1_catalogo">Selecciona el departamento que gustes visitar!</h2>
 
 <div id="buscar">
     <form action="", method="get">
@@ -21,39 +22,23 @@
     </form>
 </div>
 
-<div id="lista">
-
-    <div id="elemento">
-        <p id="p_elemento">NOMBRE DEL PAQUETE</p>
-        <p id="p_contenido">Este es el nombre del paquete</p>
-    </div>
-
-    <div id="elemento">
-        <p id="p_elemento">DESCRIPCION</p>
-        <p id="p_contenido">Esta es la descripcion</p>
-    </div>
-
-    <div id="elemento">
-        <p id="p_elemento">FECHA DE INICIO Y FIN</p>
-        <p id="p_contenido">Esta es la fecha</p>
-    </div>
-
-    <div id="elemento">
-        <p id="p_elemento">NÚMERO TOTAL DE DÍAS</p>
-        <p id="p_contenido">Este es el número total de días</p>
-    </div>
-
-    <div id="elemento">
-        <p id="p_elemento">NÚMERO DE PERSONAS</p>
-        <p id="p_contenido">Este es el número de personas</p>
-    </div>
-
-    <div id="elemento">
-        <p id="p_elemento">PRECIO</p>
-        <p id="p_contenido">Este es el precio</p>
-    </div>
-
-</div>
+<table>
+    <caption style="text-align: center;"></caption>
+        <tr>
+            <th>DESCRIPCION</th>
+            <th>FECHA DE INICIO Y FIN</th>
+            <th>NÚMERO TOTAL DE DÍAS</th>
+            <th>NÚMERO DE PERSONAS</th>
+            <th>PRECIO</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+</table>
 
 
 {%endblock%}
