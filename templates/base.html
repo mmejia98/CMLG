@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title> {% block title %} {%endblock%}</title>
+    <link rel="stylesheet" href="{%static 'catalogo.css' %}">
+    <link rel="stylesheet" href="{%static 'inicio.css' %}">
+
     <style>
         #bienvenida{
             background-color: rgb(58, 190, 179);
             text-align: center;
+            font-family: fantasy;
         }
 
         #pie_pagina{

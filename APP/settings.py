@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'APP.urls'
 
-# En DIR hemos agregado el directorio que contendra las paginas 
+# En DIR hemos agregado el directorio que contendra las paginas
 # Este es templates
 # Usaremos el metodo getcwd para obtener la URL del proyecto y facilitar el uso
 

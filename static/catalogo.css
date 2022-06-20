@@ -1,0 +1,26 @@
+#buscar{
+    text-align: center;
+}
+
+table{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 2px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#h1_catalogo
+{
+    text-align: center;
+    font-family: fantasy;
+}
+
+

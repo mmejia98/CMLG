@@ -24,7 +24,7 @@ from . import views
 # La URL sera la siguiente: http://127.0.0.1:8000/tu_pagina
 
 urlpatterns = [
-    path('verPaquetes/', views.verPaquetes, name='verPaquetes'),
+    path('verPaquetes/', views.verPaquetes, name='paquetes'),
     path('verPaquetes/<int:id>/', views.verEspecificacionPaquete, name='verEspecificacionPaquete'),
-    path('verPaquetes/catalogo/<int:id>/', views.verCatalogo, name='VerCatalogo'),
+    path('verPaquetes/verCatalogo/', views.verCatalogo, name='catalogo'),
 ]

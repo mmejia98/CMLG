@@ -1,0 +1,44 @@
+{%extends "base.html" %}
+
+{% block title %} Catalogo {%endblock%}
+
+{%block content%} 
+
+<br>
+
+<h2 id="h1_catalogo">Selecciona el departamento que gustes visitar!</h2>
+
+<div id="buscar">
+    <form action="{% url 'catalogo' %}", method="get">    
+        <select name="catalogo" id="catalogo">
+            <option value="0" selected>--Seleccione--</option>
+            {% for catalogo in catalogos %}
+            <option value="{{catalogo.id}}">{{catalogo.departamento}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit", value="Seleccionar departamento..">
+    </form>
+</div>
+
+<table>
+    <caption style="text-align: center;"></caption>
+        <tr>
+            <th>DESCRIPCION</th>
+            <th>FECHA DE INICIO Y FIN</th>
+            <th>NÚMERO TOTAL DE DÍAS</th>
+            <th>NÚMERO DE PERSONAS</th>
+            <th>PRECIO</th>
+        </tr>
+        {% for paquete in paquetes %}
+        <tr>
+            <td>{{paquete.especificacionpaquete.descripcion}}</td>
+            <td>{{paquete.especificacionpaquete.fechaInicio}}</td>
+            <td>{{paquete.especificacionpaquete.numeroDias}}</td>
+            <td>{{paquete.especificacionpaquete.numeroPersonas}}</td>
+            <td>{{paquete.especificacionpaquete.precio}}</td>
+        </tr>
+        {% endfor %}
+</table>
+
+
+{%endblock%}
