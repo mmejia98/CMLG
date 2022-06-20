@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'APP.urls'
 
-# En DIR hemos agregado el directorio que contendra las paginas 
+# En DIR hemos agregado el directorio que contendra las paginas
 # Este es templates
 # Usaremos el metodo getcwd para obtener la URL del proyecto y facilitar el uso
 
@@ -64,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Agrega aqui la direccion de los templates. Usa el explorador de archivos y copia la direccion
-        'DIRS': ['templates'],
+        'DIRS': ['C:/Proyecto/CMLG/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Turismo',
         'USER': 'postgres',
-        'PASSWORD': '00Alessandrohouse',
+        'PASSWORD': '4362',
         'HOST': '127.0.0.1',
         'DATABASE_POST': '5432',
     }
