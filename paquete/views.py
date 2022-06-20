@@ -14,7 +14,8 @@ def paquete1(request):
 
 def verEspecificacionPaquete(request, id):
     idPaquete = id
-    especificacionPaquete = EspecificacionPaquete.objects.get(id__exact=id)
+    paquete = Paquete.objects.get(id=id)
+    especificacionPaquete = EspecificacionPaquete.objects.get(id__exact=paquete.especificacionpaquete_id)
     return HttpResponse(especificacionPaquete)
 
 def verCatalogo(requets, id):
