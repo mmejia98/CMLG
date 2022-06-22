@@ -17,6 +17,7 @@ from ast import Import
 from django.contrib import admin
 from django.urls import path
 from . import views
+from .views import *
 
 # Ahora haremos que el usuario pueda acceder por medio del URL
 # Para lograrlo agregar un path con los argumentos requeridos
@@ -24,7 +25,7 @@ from . import views
 # La URL sera la siguiente: http://127.0.0.1:8000/tu_pagina
 
 urlpatterns = [
-    path('verPaquetes/', views.verPaquetes, name='paquetes'),
-    path('verPaquetes/<int:id>/', views.verEspecificacionPaquete, name='verEspecificacionPaquete'),
-    path('verPaquetes/verCatalogo/', views.verCatalogo, name='catalogo'),
+    path('verPaquetes/', VerPaquetes.as_view(), name='paquetes'),
+    path('verPaquetes/<int:id>/', VerEspecificacionPaquete.as_view(), name='verEspecificacionPaquete'),
+    path('verPaquetes/verCatalogo/', VerCatalogo.as_view(), name='catalogo'),
 ]
