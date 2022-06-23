@@ -11,36 +11,58 @@
             <div class="card-body p-md-5">
               <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-  
+                  <form action="{% url 'crearReserva' %}" method="post">
+                  {% csrf_token %}
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Crear Reserva</p>
-  
-                  <label class="form-label" for="form3Example1c">Paquete seleccionado: </label>
+                  <input type="hidden" name="nombre" value="{{nombre}}">
+                  <input type="hidden" name="apellido" value="{{apellido}}">
+                  <input type="hidden" name="nacionalidad" value="{{nacionalidad}}">
+                  <input type="hidden" name="fecha_nacimiento" value="{{fecha_nacimiento}}">
+                  <input type="hidden" name="dui" value="{{dui}}">
+                  <input type="hidden" name="sexo" value="{{sexo}}">
+                  <input type="hidden" name="email" value="{{email}}">
+                  <input type="hidden" name="telefono" value="{{telefono}}">
+                  <input type="hidden" name="pais_residencia" value="{{pais_residencia}}">
+                  <input type="hidden" name="monto" value="{{paquete.especificacionpaquete.precio}}">
+                  <label class="form-label" for="form3Example1c">Paquete seleccionado: {{paquete.especificacionpaquete.descripcion}}</label>
+                  <input type="hidden" name="paquete_id" value="{{paquete.id}}">
+                  
                   <br></br>
                   <label class="form-label" for="form3Example1c">Informacion del usuario</label>
                   <br></br>
-                  <label class="form-label" for="form3Example1c">Nombres:</label>
+                  <label class="form-label" for="form3Example1c">Nombres: {{nombre}}</label>
+                  
                   <br></br>
-                  <label class="form-label" for="form3Example1c">Apellido:</label>
+                  <label class="form-label" for="form3Example1c">Apellido: {{apellido}}</label>
+                  
                   <br></br>
-                  <label class="form-label" for="form3Example1c">Teléfono: </label>
+                  <label class="form-label" for="form3Example1c">Teléfono: {{telefono}}</label>
                   <br></br>
-                  <label class="form-label" for="form3Example1c">Correo electrónico:</label>
+                  <label class="form-label" for="form3Example1c">Correo electrónico: {{email}}</label>
                   <br></br>
-                  <label class="form-label" for="form3Example1c">Documento de identidad:</label>
+                  <label class="form-label" for="form3Example1c">Documento de identidad: {{dui}}</label>
                   <br></br>
                   <label class="form-label" for="form3Example1c">---------------------------</label>
+                  <br></br>
+                  <label class="form-label" for="form3Example1c">Reservar para: </label>
+                  <input type="date" name="fecha">
+                  <br></br>
+                  <label class="form-label" for="form3Example1c">Para la hora: </label>
+                  <input type="time" name="hora">
                   <br></br>
                   <label class="form-label" for="form3Example1c">Informacion adicional:</label>
                   <br></br>
                   <legend>Seleccione el método de pago a utilizar:</legend>
                   <label>
-                    <input type="radio" name="color" value="Efectivo"> Efectivo
+                    <input type="radio" name="tipo" value="Efectivo" checked> Efectivo
                   </label>
                   <p><label>
-                    <input type="radio" name="color" value="Tarjeta de crédito">Tarjeta de crédito
+                    <input type="radio" name="tipo" value="Tarjeta de crédito">Tarjeta de crédito
                   </label></p>    
                   <br></br>
-  
+                  <label class="form-label" for="form3Example1c">Monto total a pagar: ${{paquete.especificacionpaquete.precio}}</label>
+                  <br></br> 
+                  <br></br>
                   <label class="form-label" for="form3Example1c">Información bancaria:</label>
                   <br></br>
                   <label class="form-label" for="form3Example1c">Número de tarjeta:</label>
@@ -69,8 +91,9 @@
    <br></br>
    
    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="button" class="btn btn-primary btn-lg">Guardar</button>
-                    </div>
+                      <input type="submit" class="btn btn-primary btn-lg" value="Guardar">
+                      </div>
+                    </form>
   
                     <br></br>
                     

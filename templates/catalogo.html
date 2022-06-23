@@ -33,7 +33,7 @@
         </tr>
         {% for paquete in paquetes %}
         <tr>
-            <td> <a href="">{{paquete.especificacionpaquete.descripcion}}</a></td>
+            <td> <form action="{% url 'registrarReserva' %}" method="get"><input type="hidden" name="paquete_id" value="{{paquete.id}}">{{paquete.especificacionpaquete.descripcion}}<input type="submit" value="Reservar"></form></td>
             <td>{{paquete.especificacionpaquete.fechaInicio}}</td>
             <td>{{paquete.especificacionpaquete.numeroDias}}</td>
             <td>{{paquete.especificacionpaquete.numeroPersonas}}</td>

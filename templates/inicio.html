@@ -11,6 +11,10 @@
 <div>
     <h1 style="text-align: left; font-family:cursive "> BUSCANDO UN VIAJE??</h1> 
 </div>
-
+{% if mensaje_exito is not None %}
+<div class="mensaje_exito">
+    {{mensaje_exito}}
+</div>
+{% endif %}
 
 {%endblock%}

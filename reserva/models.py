@@ -17,7 +17,7 @@ class Pago(models.Model):
 
 class Reserva(models.Model):
     pago = models.OneToOneField(Pago, on_delete=models.CASCADE)
-    catalogo = models.ForeignKey(Catalogo, on_delete=models.CASCADE)
+    paquete = models.ForeignKey(Paquete, on_delete=models.CASCADE)
     persona = models.OneToOneField(Persona, on_delete=models.CASCADE, null=True, blank=True)
     reporte = models.ForeignKey(Reporte, null=True, blank=True, on_delete=models.SET_NULL)
     ticket = models.CharField(max_length=8, unique=True)

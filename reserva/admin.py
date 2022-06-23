@@ -9,7 +9,7 @@ class PagoAdmin(admin.ModelAdmin):
     list_display = ("id", "tipo", "monto")
 
 class ReservaAdmin(admin.ModelAdmin):
-    list_display = ("id", "pago", "catalogo", "reporte", "ticket", "pagado", "fecha", "hora")
+    list_display = ("id", "pago", "paquete", "reporte", "ticket", "pagado", "fecha", "hora")
 
 class Reserva_UserAdmin(admin.ModelAdmin):
     list_display = ("id", "reserva", "user")
