@@ -1,6 +1,5 @@
 from select import select
 from django.db import models
-from numpy import true_divide
 
 # Create your models here.
 

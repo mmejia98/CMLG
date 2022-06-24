@@ -1,6 +1,5 @@
 from inspect import classify_class_attrs
 from pyexpat import model
-from tkinter import CASCADE
 from django.db import models
 from paquete.models import *
 from reporte.models import *

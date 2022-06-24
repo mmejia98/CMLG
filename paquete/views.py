@@ -1,4 +1,3 @@
-import re
 from django.http import HttpResponse
 from django.template import *
 from django.shortcuts import *
