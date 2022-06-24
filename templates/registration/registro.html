@@ -1,6 +1,23 @@
-<h2>Registro</h2>
-<form method="POST" action="{% url 'registrarse' %}">
-{% csrf_token %}
-{{form.as_p}}
-<input type="submit" value="Registrarse">
+
+
 </form>
+
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="../../static/login.css">
+  <title>Registrarse</title>
+</head>
+<body>
+<center><h2>BIENVENIDO A PAQUETES TURISTICOS HDP</h2></center>
+<div class="login-page">
+    <center><h2>Registro</h2></center>
+<div class="form">
+    <form method="POST" class="login-form" action="{% url 'registrarse' %}">
+        {% csrf_token %}
+        {{form.as_p}}
+    <button type="submit">Registrarse</button>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -3,18 +3,17 @@
 {% block title %} INICIO {%endblock%}
 
 {%block content%} 
-
-<head>
-    <link rel="stylesheet" href="../static/inicio.css">
-</head>
-
-<div>
-    <h1 style="text-align: left; font-family:cursive "> BUSCANDO UN VIAJE??</h1> 
+{% load static %}
+<div class="banner">
+    <h1 class="banner_text"> BUSCANDO UN VIAJE??</h1> 
 </div>
 {% if mensaje_exito is not None %}
-<div class="mensaje_exito">
+<div class="contenedor mensaje_exito">
     {{mensaje_exito}}
 </div>
 {% endif %}
+<section class="contenedor bienvenida">
+    <h1>¡CMLG te da la bienvenida!</h1>
+</section>
 
 {%endblock%}

@@ -1,3 +1,47 @@
-#div_1{
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Mulish:wght@200;400;700&family=Open+Sans:wght@300;400;500;700&display=swap');
+
+.banner{
+    background-image: url(img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+}
+
+.banner_text{
+    margin: 0;
+    padding-top: 100px;
+    padding-left: 50px;
+    color: antiquewhite;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.bienvenida{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,81,230,1) 49%, rgba(8,37,140,1) 100%, rgba(3,151,215,1) 100%, rgba(2,167,226,1) 100%, rgba(3,143,210,1) 100%, rgba(45,59,185,1) 100%, rgba(0,212,255,1) 100%);
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 25px;
+}
+
+.mensaje_exito{
+    background-color: #44ce40;
+    border: 2px solid green;
+    height: 50px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 25px;
+}
+
+#pie_pagina{
+    width: 100%;
+    background-color: gray;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 20px;
+    text-align: right;
 }

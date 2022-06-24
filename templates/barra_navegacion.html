@@ -1,43 +1,13 @@
-<html>
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="{%static 'barra_navegacion.css' %}">
-    <!--<style>
-        #barra_navegacion{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        #barra_navegacion li{
-            display: inline;
-            margin: 0 20px;
-        }
-
-    </style>
--->
-</head>
-    <body>
-        <ul id="barra_navegacion">
-            <li ><a href="{% url 'inicio' %}">INICIO</a></li>
-            <li> <a href="{% url 'paquetes' %}">VER CATALOGO</a></li>
-            <li> <a href="">CONSULTA TU RESERVA</a></li>
-            <li> <a href="">RECOMENDACIONES</a></li>
-            {% if user.is_authenticated %}
-            <li>{{ user.username }}</li>
-            <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
-            {% else  %}
-            <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
-            <li><a href="{% url 'registrarse' %}">Registrarse</a></li>
-            {% endif %}
-        </ul>
-    </body>
-</html>
-
-<html>
-    <head>
-
-    </head>
-</html>
+<nav id="barra_navegacion">
+<a href="{% url 'inicio' %}">INICIO</a>
+ <a href="{% url 'paquetes' %}">VER CATALOGO</a>
+<a href="">CONSULTA TU RESERVA</a>
+<a href="">RECOMENDACIONES</a>
+    {% if user.is_authenticated %}
+<a href="#">{{ user.username }}</a>
+<a href="{% url 'logout' %}">CERRAR SESION</a>
+    {% else  %}
+<a href="{% url 'login' %}">INICIAR SESION</a>
+<a href="{% url 'registrarse' %}">REGISTRARSE</a>
+    {% endif %}
+</nav>
